@@ -13,6 +13,7 @@ struct ContentView: View {
 	@State private var isRunning: Bool = false
 	@State private var setMinutes: String = "00"
 	@State private var setSeg: String = "00"
+	@State private var pause: Bool = false
 	
     var body: some View {
 		VStack (alignment: .center){
@@ -36,11 +37,19 @@ struct ContentView: View {
 				.onTapGesture {
 					startTimer()
 				}
+				.padding()
+			
+			Image(systemName: "pause.fill")
+				.onTapGesture {
+					pauseTimer()
+				}
+				.padding()
 			
 			Image(systemName: "stop.circle")
 				.onTapGesture {
 					stopTimer()
 				}
+				.padding()
 
         }
         .padding()
@@ -56,7 +65,9 @@ struct ContentView: View {
 		
 		let time = "\(setMinutes):\(setSeg)"
 		
-		timeRemaining = TimeInterval(minutesAndSeconds: time) ?? 0.0
+		if !pause {
+			timeRemaining = TimeInterval(minutesAndSeconds: time) ?? 0.0
+		}
 		
 //		timeRemaining = (TimeInterval(setMinutes) ?? 0.0) * 60 //convertir a minutos
 		
@@ -70,10 +81,21 @@ struct ContentView: View {
 		}
 	}
 	
+	private func pauseTimer() {
+		isRunning = false
+		timer?.invalidate()
+		pause.toggle()
+		if timeRemaining <= 0 {
+			timeRemaining = 1500
+		}
+		
+	}
+	
 	private func stopTimer() {
 		isRunning = false
 		timer?.invalidate()
 		timeRemaining = 1500
+		
 	}
 }
 
