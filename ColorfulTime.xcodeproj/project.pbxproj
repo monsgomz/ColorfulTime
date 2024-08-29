@@ -15,6 +15,8 @@
 		C2A9C21C2C7D6478008AF4B6 /* ColorfulTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A9C21B2C7D6478008AF4B6 /* ColorfulTimeUITests.swift */; };
 		C2A9C21E2C7D6478008AF4B6 /* ColorfulTimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A9C21D2C7D6478008AF4B6 /* ColorfulTimeUITestsLaunchTests.swift */; };
 		C2F41A762C8106A5000B8B00 /* ExtensionTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F41A752C8106A5000B8B00 /* ExtensionTimeInterval.swift */; };
+		C2F41A7C2C81135C000B8B00 /* CircleTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F41A7B2C81135C000B8B00 /* CircleTime.swift */; };
+		C2F41A7E2C8127A4000B8B00 /* WaterShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F41A7D2C8127A4000B8B00 /* WaterShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		C2A9C21B2C7D6478008AF4B6 /* ColorfulTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulTimeUITests.swift; sourceTree = "<group>"; };
 		C2A9C21D2C7D6478008AF4B6 /* ColorfulTimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulTimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C2F41A752C8106A5000B8B00 /* ExtensionTimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTimeInterval.swift; sourceTree = "<group>"; };
+		C2F41A7B2C81135C000B8B00 /* CircleTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTime.swift; sourceTree = "<group>"; };
+		C2F41A7D2C8127A4000B8B00 /* WaterShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,13 +101,13 @@
 			isa = PBXGroup;
 			children = (
 				C2A9C22A2C7D64AF008AF4B6 /* App */,
-				C2A9C22B2C7D64C3008AF4B6 /* Core */,
 				C2A9C22F2C7D64EE008AF4B6 /* Helpers */,
 				C2A9C22E2C7D64E9008AF4B6 /* Model */,
+				C2F41A772C810EF5000B8B00 /* Resources */,
+				C2F41A782C810F05000B8B00 /* Services */,
 				C2A9C22C2C7D64CA008AF4B6 /* View */,
 				C2A9C2302C7D6A3C008AF4B6 /* ViewModel */,
 				C2A9C2022C7D6476008AF4B6 /* ContentView.swift */,
-				C2A9C2042C7D6478008AF4B6 /* Assets.xcassets */,
 				C2A9C2062C7D6478008AF4B6 /* Preview Content */,
 			);
 			path = ColorfulTime;
@@ -142,13 +146,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		C2A9C22B2C7D64C3008AF4B6 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		C2A9C22C2C7D64CA008AF4B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +157,8 @@
 		C2A9C22D2C7D64D6008AF4B6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C2F41A7B2C81135C000B8B00 /* CircleTime.swift */,
+				C2F41A7D2C8127A4000B8B00 /* WaterShape.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -184,6 +183,21 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C2F41A772C810EF5000B8B00 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C2A9C2042C7D6478008AF4B6 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C2F41A782C810F05000B8B00 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +330,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F41A7C2C81135C000B8B00 /* CircleTime.swift in Sources */,
+				C2F41A7E2C8127A4000B8B00 /* WaterShape.swift in Sources */,
 				C2A9C2032C7D6476008AF4B6 /* ContentView.swift in Sources */,
 				C2F41A762C8106A5000B8B00 /* ExtensionTimeInterval.swift in Sources */,
 				C2A9C2012C7D6476008AF4B6 /* ColorfulTimeApp.swift in Sources */,
